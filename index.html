@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akira UNIYA | 鵜丹谷 瑛 Portfolio</title>
+<meta name="description" content="鵜丹谷 瑛（Akira Uniya）の公式ポートフォリオ。神戸大学大学院経営学研究科 博士後期課程。イノベーション・プロセス、技術の社会的構成の研究。">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['"Noto Sans JP"', 'sans-serif'],
+        serif: ['"Noto Serif JP"', 'serif'],
+      },
+      colors: {
+        surface: '#F7F8F6',
+        ink: '#1a1e2e',
+        muted: '#6B7280',
+        primary: '#1e3050',
+        secondary: '#E8B800',
+        accent: '#2d6b68',
+        borderLight: '#E2E4EA'
+      }
+    }
+  }
+}
+</script>
+<style>
+body { background-color: #F7F8F6; color: #1a1e2e; scroll-behavior: smooth; }
+.lang-en .ja { display: none !important; }
+.lang-ja .en { display: none !important; }
+.nav-link { position: relative; transition: color 0.3s ease; }
+.nav-link::after { content: ''; position: absolute; width: 0; height: 1px; bottom: -2px; left: 0; background-color: #1e3050; transition: width 0.3s ease; }
+.nav-link:hover::after { width: 100%; }
+.fade-in { opacity: 0; transform: translateY(20px); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+.gallery-card {
+  background: white;
+  border: 1px solid #E2E4EA;
+  border-radius: 1rem;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.gallery-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgb(30 48 80 / 0.12), 0 8px 10px -6px rgb(30 48 80 / 0.08);
+  border-color: #E8B800;
+}
+</style>
+</head>
+<body class="lang-ja font-sans antialiased leading-relaxed">
+
+<!-- ===== HEADER ===== -->
+<header class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-borderLight/50">
+  <div class="max-w-6xl mx-auto px-8 h-20 flex items-center justify-between">
+    <a href="#" class="font-sans text-lg tracking-tighter font-bold text-primary uppercase">Akira UNIYA</a>
+    <nav class="hidden md:flex space-x-10 text-[10px] tracking-widest uppercase font-bold text-muted">
+      <a href="#about"         class="nav-link hover:text-primary"><span class="ja">略歴</span><span class="en">About</span></a>
+      <a href="#achievements"  class="nav-link hover:text-primary"><span class="ja">業績</span><span class="en">Achievements</span></a>
+      <a href="#contact"       class="nav-link hover:text-primary"><span class="ja">連絡先</span><span class="en">Contact</span></a>
+    </nav>
+    <button id="langToggle" class="text-[9px] font-bold border border-primary/20 text-primary px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all tracking-[0.1em]">
+      <span class="ja">ENGLISH</span><span class="en">日本語</span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="min-h-screen flex items-center justify-center px-8">
+    <div class="max-w-4xl mx-auto text-center fade-in">
+      <div class="mb-2 text-[10px] tracking-[0.4em] uppercase text-secondary font-bold">Portfolio</div>
+      <h1 class="font-sans text-5xl md:text-7xl mb-8 text-ink tracking-tighter font-bold leading-tight">
+        鵜丹谷 瑛 <br class="md:hidden"> <span class="text-primary/90">Akira UNIYA</span>
+      </h1>
+      <div class="w-12 h-[1px] bg-primary/20 mx-auto mb-10"></div>
+      <p class="text-xs md:text-sm text-primary font-bold tracking-[0.15em] uppercase">
+        <span class="ja">神戸大学大学院経営学研究科 博士後期課程</span>
+        <span class="en">Ph.D. Student, Graduate School of Business Administration, Kobe University</span>
+      </p>
+      <p class="mt-4 text-xs text-muted tracking-widest">
+        <a href="mailto:uni.uni.akira@gmail.com" class="hover:text-primary transition-colors">uni.uni.akira@gmail.com</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="py-32 px-8 bg-white border-y border-borderLight/50">
+    <div class="max-w-5xl mx-auto fade-in">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-start">
+
+        <!-- Photo + heading -->
+        <div class="md:col-span-4 space-y-8">
+          <div class="aspect-[3/4] bg-surface rounded-2xl overflow-hidden border border-borderLight relative group">
+            <img
+              src="profile.jpg"
+              alt="Akira Uniya"
+              class="w-full h-full object-cover transition-all duration-700"
+            >
+            <div class="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-all"></div>
+          </div>
+          <div>
+            <h2 class="font-serif text-3xl text-primary tracking-tighter uppercase">About</h2>
+            <div class="mt-4 w-8 h-[1px] bg-secondary"></div>
+          </div>
+        </div>
+
+        <!-- Bio + Timeline -->
+        <div class="md:col-span-8 space-y-12">
+          <div class="space-y-6">
+            <h3 class="text-[10px] font-bold uppercase tracking-widest text-secondary">Profile</h3>
+            <p class="text-sm text-muted leading-8 font-light">
+              <span class="ja">2026年、神戸大学大学院経営学研究科博士前期課程を修了。現在は同研究科の博士後期課程に在籍。専門はイノベーション、製品開発、生産管理。組織学会、工業経営研究学会、日本経営学会の会員。</span>
+              <span class="en">Completed Master's degree in 2026 and currently enrolled in the Ph.D. program at the Graduate School of Business Administration, Kobe University. Specializes in innovation, product development, and production management. Member of the Organization Science Society of Japan, Japan Society for Industrial Management, and Japan Academy of Business Administration.</span>
+            </p>
+          </div>
+
+          <div class="space-y-8">
+            <h3 class="text-[10px] font-bold uppercase tracking-widest text-secondary">Timeline</h3>
+            <div class="space-y-6 border-l border-borderLight pl-6">
+              <div class="relative">
+                <div class="absolute -left-[29px] top-1 w-2 h-2 rounded-full bg-primary"></div>
+                <p class="text-[10px] font-mono text-muted mb-1">2026.04 – Present</p>
+                <p class="text-sm font-bold text-ink">
+                  <span class="ja">神戸大学大学院経営学研究科 博士後期課程</span>
+                  <span class="en">Kobe University, Ph.D. Program</span>
+                </p>
+              </div>
+              <div class="relative">
+                <div class="absolute -left-[29px] top-1 w-2 h-2 rounded-full bg-secondary"></div>
+                <p class="text-[10px] font-mono text-muted mb-1">2024.04 – 2026.03</p>
+                <p class="text-sm font-bold text-ink">
+                  <span class="ja">神戸大学大学院経営学研究科 博士前期課程</span>
+                  <span class="en">Kobe University, Master's Program</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <h3 class="text-[10px] font-bold uppercase tracking-widest text-secondary">Memberships</h3>
+            <ul class="text-sm text-muted font-light space-y-2">
+              <li class="flex gap-3 items-start"><span class="text-secondary mt-0.5">—</span><span class="ja">組織学会（2025年10月〜）</span><span class="en">Organization Science Society of Japan (Oct 2025–)</span></li>
+              <li class="flex gap-3 items-start"><span class="text-secondary mt-0.5">—</span><span class="ja">工業経営研究学会（2025年6月〜）</span><span class="en">Japan Society for Industrial Management (Jun 2025–)</span></li>
+              <li class="flex gap-3 items-start"><span class="text-secondary mt-0.5">—</span><span class="ja">日本経営学会（2024年10月〜）</span><span class="en">Japan Academy of Business Administration (Oct 2024–)</span></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS ===== -->
+  <section id="achievements" class="py-32 px-8">
+    <div class="max-w-6xl mx-auto fade-in">
+      <h2 class="font-serif text-3xl mb-20 text-center text-primary uppercase tracking-widest font-bold">Achievements</h2>
+
+      <!-- 01. Papers -->
+      <div class="mb-24">
+        <h3 class="text-[10px] font-bold uppercase tracking-[0.3em] text-secondary mb-10 border-b border-borderLight pb-4 flex items-center">
+          <span class="mr-4">01. Papers（論文）</span>
+          <div class="flex-grow h-[1px] bg-borderLight/50"></div>
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- rm-papers-start -->
+          <div class="gallery-card p-8">
+            <div>
+              <div class="flex items-center gap-2 mb-4">
+                <span class="text-[10px] font-mono text-secondary">2026.03</span>
+              </div>
+              <h4 class="text-base font-bold text-ink mb-3 leading-tight">
+                イノベーション・プロモーターの再定義：技術の社会的構成による半導体開発の事例研究
+              </h4>
+              <p class="text-[11px] text-muted italic mb-6">
+                鵜丹谷 瑛<br>修士論文
+              </p>
+            </div>
+            <a href="https://researchmap.jp/UNIYA_Akira/published_papers/53214729" target="_blank" rel="noopener" class="mt-auto text-[9px] font-bold uppercase tracking-widest border border-primary/20 text-primary px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all text-center">LINK</a>
+          </div>
+
+          <div class="gallery-card p-8">
+            <div>
+              <div class="flex items-center gap-2 mb-4">
+                <span class="text-[10px] font-mono text-secondary">2025.09</span>
+              </div>
+              <h4 class="text-base font-bold text-ink mb-3 leading-tight">
+                プロセス・イノベーションにおける実験
+              </h4>
+              <p class="text-[11px] text-muted italic mb-6">
+                宮尾 学，梅木 隆守，鵜丹谷 瑛<br>国民経済雑誌 229(3) 65-79
+              </p>
+            </div>
+            <a href="https://researchmap.jp/UNIYA_Akira/published_papers/53109365" target="_blank" rel="noopener" class="mt-auto text-[9px] font-bold uppercase tracking-widest border border-primary/20 text-primary px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all text-center">LINK</a>
+          </div>
+          <!-- rm-papers-end -->
+        </div>
+      </div>
+
+      <!-- 02. Presentations -->
+      <div class="mb-24">
+        <h3 class="text-[10px] font-bold uppercase tracking-[0.3em] text-secondary mb-10 border-b border-borderLight pb-4 flex items-center">
+          <span class="mr-4">02. Presentations（口頭発表）</span>
+          <div class="flex-grow h-[1px] bg-borderLight/50"></div>
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- rm-presentations-start -->
+          <div class="gallery-card p-8">
+            <div>
+              <div class="flex items-center gap-2 mb-4">
+                <span class="text-[10px] font-mono text-secondary">2026.09</span>
+              </div>
+              <h4 class="text-base font-bold text-ink mb-3 leading-tight">
+                Organizational Factors Overcoming Technical Determinism in Process Industry Innovation
+              </h4>
+              <p class="text-[11px] text-muted italic mb-6">
+                Akira Uniya<br>27th CINet Conference Innovation in the Age of Complexity
+              </p>
+            </div>
+            <a href="https://researchmap.jp/UNIYA_Akira/presentations/53654272" target="_blank" rel="noopener" class="mt-auto text-[9px] font-bold uppercase tracking-widest border border-primary/20 text-primary px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all text-center">LINK</a>
+          </div>
+
+          <div class="gallery-card p-8">
+            <div>
+              <div class="flex items-center gap-2 mb-4">
+                <span class="text-[10px] font-mono text-secondary">2026.09</span>
+              </div>
+              <h4 class="text-base font-bold text-ink mb-3 leading-tight">
+                Capturing Roles of Innovation Promoter in Complex Innovation Projects
+              </h4>
+              <p class="text-[11px] text-muted italic mb-6">
+                Manabu Miyao, ryuma Umeki, Shunya Koyama, Akira Uniya, Fumikazu Morimura<br>27th CINet Conference Innovation in the Age of Complexity
+              </p>
+            </div>
+            <a href="https://researchmap.jp/UNIYA_Akira/presentations/53654204" target="_blank" rel="noopener" class="mt-auto text-[9px] font-bold uppercase tracking-widest border border-primary/20 text-primary px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all text-center">LINK</a>
+          </div>
+
+          <div class="gallery-card p-8">
+            <div>
+              <div class="flex items-center gap-2 mb-4">
+                <span class="text-[10px] font-mono text-secondary">2026.07</span>
+              </div>
+              <h4 class="text-base font-bold text-ink mb-3 leading-tight">
+                Bundling multiplicity in more-than-human routines: Pine pruning and routine dynamics in a Japanese garden
+              </h4>
+              <p class="text-[11px] text-muted italic mb-6">
+                Ko Yoneda, Yunrun Lin, Akira Uniya<br>42nd EGOS online Colloquium 2026, Bergamo
+              </p>
+            </div>
+            <a href="https://researchmap.jp/UNIYA_Akira/presentations/53433663" target="_blank" rel="noopener" class="mt-auto text-[9px] font-bold uppercase tracking-widest border border-primary/20 text-primary px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all text-center">LINK</a>
+          </div>
+
+          <div class="gallery-card p-8">
+            <div>
+              <div class="flex items-center gap-2 mb-4">
+                <span class="text-[10px] font-mono text-secondary">2026.07</span>
+              </div>
+              <h4 class="text-base font-bold text-ink mb-3 leading-tight">
+                Exclusion and Inclusion in Craft Practices through Garden-Making: Rethinking Skill, Design Competence, and Human–Nonhuman Interactions
+              </h4>
+              <p class="text-[11px] text-muted italic mb-6">
+                Yunrun Lin, Ko Yoneda, Akira Uniya<br>42nd EGOS online Colloquium 2026, Bergamo
+              </p>
+            </div>
+            <a href="https://researchmap.jp/UNIYA_Akira/presentations/53433643" target="_blank" rel="noopener" class="mt-auto text-[9px] font-bold uppercase tracking-widest border border-primary/20 text-primary px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all text-center">LINK</a>
+          </div>
+
+          <div class="gallery-card p-8">
+            <div>
+              <div class="flex items-center gap-2 mb-4">
+                <span class="text-[10px] font-mono text-secondary">2025.12</span>
+              </div>
+              <h4 class="text-base font-bold text-ink mb-3 leading-tight">
+                プロモーターのジレンマ 技術の社会的構成を用いた初めての半導体開発の分析
+              </h4>
+              <p class="text-[11px] text-muted italic mb-6">
+                鵜丹谷 瑛<br>経営関連学会協議会主催次世代研究者共創フォーラム
+              </p>
+            </div>
+            <a href="https://researchmap.jp/UNIYA_Akira/presentations/53214693" target="_blank" rel="noopener" class="mt-auto text-[9px] font-bold uppercase tracking-widest border border-primary/20 text-primary px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all text-center">LINK</a>
+          </div>
+
+          <div class="gallery-card p-8">
+            <div>
+              <div class="flex items-center gap-2 mb-4">
+                <span class="text-[10px] font-mono text-secondary">2025.12</span>
+              </div>
+              <h4 class="text-base font-bold text-ink mb-3 leading-tight">
+                When Assembly Firms Build the Unassembled: Reimagining Product-Process Integration
+              </h4>
+              <p class="text-[11px] text-muted italic mb-6">
+                Akira Uniya<br>ISPIM Connects Yokohama – Reconstituting the Innovation Ecosystem
+              </p>
+            </div>
+            <a href="https://researchmap.jp/UNIYA_Akira/presentations/53214506" target="_blank" rel="noopener" class="mt-auto text-[9px] font-bold uppercase tracking-widest border border-primary/20 text-primary px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all text-center">LINK</a>
+          </div>
+
+          <div class="gallery-card p-8">
+            <div>
+              <div class="flex items-center gap-2 mb-4">
+                <span class="text-[10px] font-mono text-secondary">2025.11</span>
+                <span class="text-[8px] font-bold uppercase tracking-widest bg-secondary/20 text-primary px-2 py-0.5 rounded-full">
+                  <span class="ja">招待</span><span class="en">Invited</span>
+                </span>
+              </div>
+              <h4 class="text-base font-bold text-ink mb-3 leading-tight">
+                『責任ある科学技術ガバナンス概論』とイノベーション論の接合点
+              </h4>
+              <p class="text-[11px] text-muted italic mb-6">
+                鵜丹谷 瑛<br>先端科学技術の倫理的・法的・社会的影響を考える責任ある研究・イノベーションの視点から 招待有り
+              </p>
+            </div>
+            <a href="https://researchmap.jp/UNIYA_Akira/presentations/53214616" target="_blank" rel="noopener" class="mt-auto text-[9px] font-bold uppercase tracking-widest border border-primary/20 text-primary px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all text-center">LINK</a>
+          </div>
+          <!-- rm-presentations-end -->
+        </div>
+      </div>
+
+      <!-- 03. MISC -->
+      <div class="mb-12">
+        <h3 class="text-[10px] font-bold uppercase tracking-[0.3em] text-secondary mb-10 border-b border-borderLight pb-4 flex items-center">
+          <span class="mr-4">03. MISC（その他）</span>
+          <div class="flex-grow h-[1px] bg-borderLight/50"></div>
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- rm-misc-start -->
+          <div class="gallery-card p-8">
+            <div>
+              <div class="flex items-center gap-2 mb-4">
+                <span class="text-[10px] font-mono text-secondary"></span>
+              </div>
+              <h4 class="text-base font-bold text-ink mb-3 leading-tight">
+                コア技術の転用によるスピンオフ・ベンチャーの創出 —ダイキンとDK-Power—
+              </h4>
+              <p class="text-[11px] text-muted italic mb-6">
+                鵜丹谷 瑛, 梅木 隆守, 宮尾 学
+              </p>
+            </div>
+            <a href="https://b.kobe-u.ac.jp/papers/2026_06/" target="_blank" rel="noopener" class="mt-auto text-[9px] font-bold uppercase tracking-widest border border-primary/20 text-primary px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all text-center">LINK</a>
+          </div>
+
+          <div class="gallery-card p-8">
+            <div>
+              <div class="flex items-center gap-2 mb-4">
+                <span class="text-[10px] font-mono text-secondary"></span>
+              </div>
+              <h4 class="text-base font-bold text-ink mb-3 leading-tight">
+                中小製造企業によるM&Aと統合プロセス —森合精機株式会社による2社のM&A事例—
+              </h4>
+              <p class="text-[11px] text-muted italic mb-6">
+                鵜丹谷 瑛 宮尾 学
+              </p>
+            </div>
+            <a href="https://b.kobe-u.ac.jp/marec/d_paper/2026_d01.html" target="_blank" rel="noopener" class="mt-auto text-[9px] font-bold uppercase tracking-widest border border-primary/20 text-primary px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all text-center">LINK</a>
+          </div>
+          <!-- rm-misc-end -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="py-40 px-8 bg-primary text-white">
+    <div class="max-w-3xl mx-auto text-center fade-in">
+      <h2 class="font-serif text-3xl mb-12 uppercase tracking-widest">Contact</h2>
+      <p class="mb-12 text-sm font-light text-white/70">
+        <span class="ja">共同研究や講演のご依頼、お問い合わせはこちらまで。</span>
+        <span class="en">For collaborative research or speaking inquiries, please reach out via email.</span>
+      </p>
+      <a href="mailto:uni.uni.akira@gmail.com" class="text-xl font-serif tracking-tight border-b border-white/20 pb-2 hover:border-white transition-all">uni.uni.akira@gmail.com</a>
+      <div class="mt-20 flex justify-center space-x-12 text-[10px] font-bold uppercase tracking-[0.3em] text-secondary/80">
+        <a href="https://researchmap.jp/UNIYA_Akira" target="_blank" class="hover:text-white transition-all">Researchmap</a>
+        <a href="https://www.linkedin.com/in/%E7%91%9B-%E9%B5%9C%E4%B8%B9%E8%B0%B7-2432a1398/" target="_blank" class="hover:text-white transition-all">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="py-12 text-center text-[9px] text-muted tracking-[0.3em] uppercase">
+  &copy; <span id="year"></span> Akira UNIYA. All rights reserved.
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Language toggle
+const langToggle = document.getElementById('langToggle');
+langToggle.addEventListener('click', () => {
+  document.body.classList.toggle('lang-ja');
+  document.body.classList.toggle('lang-en');
+});
+
+// Fade-in on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Smooth scroll
+document.querySelectorAll('.nav-link').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
